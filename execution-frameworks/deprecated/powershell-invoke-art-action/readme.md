@@ -49,7 +49,7 @@ When you put these together, you get a basic technique description that might lo
 ```
 ### bitsadmin.exe
 
-    bitsadmin.exe  /transfer /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/Windows/Execution/Bitsadmin.md $env:TEMP\AtomicRedTeam\bitsadmin_flag.ps1
+    bitsadmin.exe  /transfer /Download /priority Foreground https://raw.githubusercontent.com/cvt111/atomic-red-team/master/Windows/Execution/Bitsadmin.md $env:TEMP\AtomicRedTeam\bitsadmin_flag.ps1
 ```
 
 Adding automation of thie technique is as simple as this, in ```AtomicRedTeam.psm1```

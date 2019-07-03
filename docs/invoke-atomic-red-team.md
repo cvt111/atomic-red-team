@@ -23,11 +23,11 @@ Once the environment is ready, run the following PowerShell one liner as Adminis
 
 `powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psinstall.AtomicRedTeam.com')"`
 
-[Source](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/install-AtomicRedTeam.ps1)
+[Source](https://raw.githubusercontent.com/cvt111/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/install-AtomicRedTeam.ps1)
 
 By default, it will download and install Atomic Red Team to `c:\tools\`
 
-Running the [install script](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/install-AtomicRedTeam.ps1) locally provides three parameters:
+Running the [install script](https://raw.githubusercontent.com/cvt111/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/install-AtomicRedTeam.ps1) locally provides three parameters:
 
 InstallPath
 - Where ART is to be installed
